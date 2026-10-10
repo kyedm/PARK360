@@ -453,6 +453,88 @@
             color: var(--text-muted);
             grid-column: 1 / -1;
         }
+        /* ================= RESPONSIVE AYARLARI ================= */
+        @media (max-width: 1024px) {
+            body {
+                flex-direction: column;
+                height: auto;
+                overflow-y: auto;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1.5px solid var(--border-color);
+                padding: 16px;
+            }
+
+            .lot-list {
+                max-height: 220px;
+            }
+
+            .content {
+                padding: 16px;
+                overflow: visible;
+            }
+
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .parking-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .kpi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floor-selector {
+                flex-wrap: wrap;
+            }
+
+            .floor-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+                flex: 1;
+                text-align: center;
+            }
+
+            .parking-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .spot-card {
+                padding: 12px;
+            }
+
+            .spot-plate {
+                font-size: 13px;
+            }
+
+            .modal-box {
+                width: 92%;
+                padding: 18px;
+            }
+
+            .row-2 {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
